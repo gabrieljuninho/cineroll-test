@@ -1,0 +1,21 @@
+# dependencies
+node_modules
+package.json
+package-lock.json
+
+# eslint
+eslintrc.json
+
+# prettier
+prettierrc.json
+
+# production
+build
+dist
+
+# github
+CHANGELOG.md
+README.md
+
+# typescript
+tsconfig.json

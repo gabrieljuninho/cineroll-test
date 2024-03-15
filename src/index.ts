@@ -5,7 +5,7 @@ const app: Application = express();
 
 dotenv.config();
 
-const PORT: Number = Number(process.env.SERVER_PORT);
+const PORT: number = Number(process.env.SERVER_PORT);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello world");
