@@ -13,3 +13,6 @@
 
 # local env files
 .env
+
+# husky
+.husky/_

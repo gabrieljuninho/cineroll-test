@@ -7,7 +7,17 @@
     "start": "npx tsc -w",
     "dev": "npx nodemon",
     "build": "tsc",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx pretty-quick --staged ng lint ng test",
+      "pre-push": "ng build --aot true"
+    }
   },
   "repository": {
     "type": "git",
@@ -29,7 +39,9 @@
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "eslint": "^8.57.0",
+    "husky": "^9.0.11",
     "prettier": "3.2.5",
+    "pretty-quick": "^4.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
   }
